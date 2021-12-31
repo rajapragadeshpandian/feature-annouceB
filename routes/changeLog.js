@@ -239,28 +239,28 @@ router.get('/page/:pageNo/:choice',(req, res) => {
 
 });
 
-router.get('/unique/tags', (req, res) => {
+// router.get('/unique/tags', (req, res) => {
 
-    console.log("###", "uniqueTags");
+//     console.log("###", "uniqueTags");
 
-    changeLog.aggregate([
-        { $unwind : "$category"},
-        { $group : { _id : "$category"}}
+//     changeLog.aggregate([
+//         { $unwind : "$category"},
+//         { $group : { _id : "$category"}}
 
-    ]).exec((err, tags) => {
-            if (err) {
-                res.status(500).json({
-                    message : "tags not found"
-                });
-            } else {
-                    res.status(200).json({
-                        tags : tags
-                    });
-            }
-    })
+//     ]).exec((err, tags) => {
+//             if (err) {
+//                 res.status(500).json({
+//                     message : "tags not found"
+//                 });
+//             } else {
+//                     res.status(200).json({
+//                         tags : tags
+//                     });
+//             }
+//     })
 
 
-});
+// });
 
 
 module.exports = router;
