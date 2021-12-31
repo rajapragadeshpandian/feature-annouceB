@@ -262,7 +262,6 @@ router.get('/unique/tags', (req, res) => {
 
 });
 
-//pending unique tags
 
 module.exports = router;
 
